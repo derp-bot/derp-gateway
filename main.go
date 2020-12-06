@@ -23,6 +23,10 @@ func init() {
 func main() {
 
 	if len(Token) == 0 {
+		Token = os.Getenv("DISCORD_TOKEN")
+	}
+
+	if len(Token) == 0 {
 		fmt.Println("You're missing a token; specify it with -t.")
 		return
 	}
