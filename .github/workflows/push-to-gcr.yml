@@ -20,7 +20,7 @@ on:
     - main
 
 env:
-  PROJECT_ID: ${{ secrets.GCE_PROJECT }}
+  PROJECT_ID: ${{ secrets.PROJECT_ID }}
   GCE_INSTANCE: ${{ secrets.GATEWAY_INSTANCE }}
   GCE_INSTANCE_ZONE: ${{ secrets.PROJECT_REGION }}
   GCR_HOST: us.gcr.io
