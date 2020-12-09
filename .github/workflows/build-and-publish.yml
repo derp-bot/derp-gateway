@@ -28,7 +28,7 @@ jobs:
     - name: Build, tag, and push
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: my-ecr-repo
+        ECR_REPOSITORY: ${{ secrets.GATEWAY_REPO_NAME }}
         IMAGE_TAG: ${{ github.sha }}
       run: |
         docker build --tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
