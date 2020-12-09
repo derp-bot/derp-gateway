@@ -19,7 +19,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.DERP_GATEWAY_AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.DERP_GATEWAY_AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-2
+        aws-region: ${{ secrets.AWS_REGION }}
 
     - name: Login to Amazon ECR
       id: login-ecr
